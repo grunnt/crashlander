@@ -1,0 +1,61 @@
+
+back.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+star
+  rotate: false
+  xy: 1, 41
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 6
+star
+  rotate: false
+  xy: 259, 41
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 7
+star
+  rotate: false
+  xy: 517, 41
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 8
+star
+  rotate: false
+  xy: 1, 7
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: 4
+star
+  rotate: false
+  xy: 775, 281
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: 5
+star
+  rotate: false
+  xy: 1, 1
+  size: 4, 4
+  orig: 4, 4
+  offset: 0, 0
+  index: 1
+star
+  rotate: false
+  xy: 35, 35
+  size: 4, 4
+  orig: 4, 4
+  offset: 0, 0
+  index: 2
+star
+  rotate: false
+  xy: 775, 278
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 3

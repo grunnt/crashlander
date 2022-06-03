@@ -1,0 +1,263 @@
+[
+{
+	shape: [
+		{
+			x: -0.75,
+			y: -0.75
+		},
+		{
+			x: -0.75,
+			y: 0.75
+		},
+		{
+			x: 0.75,
+			y: 0.75
+		},
+		{
+			x: 0.75,
+			y: -0.75
+		}
+	],
+	textureName: tank-large,
+	attach: [
+		{
+			y: 0.8
+		},
+		{
+			x: 0.8
+		},
+		{
+			y: -0.8
+		},
+		{
+			x: -0.8
+		}
+	],
+	tank: {
+		fuel: 20
+	},
+	name: "Large fuel tank",
+	mass: 4,
+	fuelTransmitter: true
+},
+{
+	shape: [
+		{
+			x: -0.35,
+			y: -0.35
+		},
+		{
+			x: -0.35,
+			y: 0.35
+		},
+		{
+			x: 0.35,
+			y: 0.35
+		},
+		{
+			x: 0.35,
+			y: -0.35
+		}
+	],
+	textureName: tank-small,
+	attach: [
+		{
+			y: 0.4
+		},
+		{
+			x: 0.4
+		},
+		{
+			y: -0.4
+		},
+		{
+			x: -0.4
+		}
+	],
+	tank: {
+		fuel: 1
+	},
+	name: "Small fuel tank",
+	mass: 1,
+	fuelTransmitter: true
+},
+{
+	shape: [
+		{
+			x: -0.3,
+			y: -0.4
+		},
+		{
+			x: -0.7,
+			y: 0.4
+		},
+		{
+			x: 0.7,
+			y: 0.4
+		},
+		{
+			x: 0.3,
+			y: -0.4
+		}
+	],
+	thruster: {
+		position: {
+			y: -0.7
+		},
+		powerPerFuel: 2.25,
+		fuelPerSecond: 0.5
+	},
+	textureName: engine-large,
+	attach: [
+		{
+			y: 0.45
+		}
+	],
+	name: "Large engine",
+	mass: 2
+},
+{
+	shape: [
+		{
+			x: -0.15,
+			y: -0.3
+		},
+		{
+			x: -0.3,
+			y: 0.3
+		},
+		{
+			x: 0.35,
+			y: 0.3
+		},
+		{
+			x: 0.15,
+			y: -0.3
+		}
+	],
+	thruster: {
+		position: {
+			y: -0.6
+		},
+		powerPerFuel: 1.5,
+		fuelPerSecond: 0.1
+	},
+	textureName: engine-small,
+	attach: [
+		{
+			y: 0.35
+		}
+	],
+	name: "Small engine",
+	mass: 1
+},
+{
+	shape: [
+		{
+			x: -1,
+			y: -0.2
+		},
+		{
+			x: -1,
+			y: -0.1
+		},
+		{
+			x: -0.5,
+			y: 0.2
+		},
+		{
+			x: 0.5,
+			y: 0.2
+		},
+		{
+			x: 1,
+			y: -0.1
+		},
+		{
+			x: 1,
+			y: -0.2
+		}
+	],
+	textureName: adapter,
+	attach: [
+		{
+			y: 0.275
+		},
+		{
+			y: -0.275
+		}
+	],
+	name: Adapter,
+	mass: 1,
+	fuelTransmitter: true
+},
+{
+	shape: [
+		{
+			x: -0.75,
+			y: -0.55
+		},
+		{
+			x: -0.75,
+			y: -0.2
+		},
+		{
+			x: -0.35,
+			y: 0.55
+		},
+		{
+			x: 0.35,
+			y: 0.55
+		},
+		{
+			x: 0.75,
+			y: -0.2
+		},
+		{
+			x: 0.75,
+			y: -0.55
+		}
+	],
+	textureName: core-cockpit,
+	attach: [
+		{
+			y: 0.6
+		},
+		{
+			y: -0.6
+		}
+	],
+	name: Cockpit,
+	mass: 3,
+	core: true
+},
+{
+	shape: [
+		{
+			x: -0.4,
+			y: -0.3
+		},
+		{
+			x: -0.25,
+			y: 0.25
+		},
+		{
+			x: 0.25,
+			y: 0.25
+		},
+		{
+			x: 0.4,
+			y: -0.3
+		}
+	],
+	textureName: core-ai,
+	attach: [
+		{
+			y: -0.32
+		}
+	],
+	name: "AI module",
+	mass: 1,
+	core: true
+}
+]
