@@ -48,6 +48,7 @@ public class GameScreen extends AbstractScreen {
 	// Graphics
 	private Atmosphere background;
 	private PolygonSpriteBatch polyBatch;
+	private float userZoom = 1.0f;
 
 	// Box2D stuff
 	private World world;
@@ -99,6 +100,7 @@ public class GameScreen extends AbstractScreen {
 		world = new World(new Vector2(0, -1), true);
 		MountainWorldGenerator gen = new MountainWorldGenerator();
 		landerWorld = gen.generate(world, LANDSCAPE_WIDTH);
+		userZoom = 1.0f;
 	}
 
 	private void setupLander() throws Exception {
@@ -166,9 +168,11 @@ public class GameScreen extends AbstractScreen {
 
 		landerController.update(delta, world, game.camera);
 
+		// Center camera on lander and set zoom based on speed
 		game.camera.position.set(lander.core.body.getPosition().x * BOX2D_TO_RENDER,
 				lander.core.body.getPosition().y * BOX2D_TO_RENDER, 0);
-		// game.camera.position.set(0, 250, 0);
+		double velocity = lander.core.body.getLinearVelocity().len();
+		game.camera.zoom = userZoom * (float)Math.max(Math.min(Math.pow(velocity, 0.2), 10.0f), 1.0f);
 		game.camera.update();
 	}
 
@@ -376,13 +380,13 @@ public class GameScreen extends AbstractScreen {
 	@Override
 	public boolean handleScrolled(float amount) {
 		if (amount < 0.0) {
-			game.camera.zoom *= 0.8f;
-			if (game.camera.zoom < 1f)
-				game.camera.zoom = 1f;
+			userZoom *= 0.8f;
+			if (userZoom < 1f)
+				userZoom = 1f;
 		} else {
-			game.camera.zoom *= 1.2f;
-			if (game.camera.zoom > 100f)
-				game.camera.zoom = 100f;
+			userZoom *= 1.2f;
+			if (userZoom > 10f)
+				userZoom = 10f;
 		}
 		return true;
 	}
